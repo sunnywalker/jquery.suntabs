@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8>
+    <title>jquery.suntabs</title>
+    <style>
+    body { max-width: 40em; margin: 0 auto; font-family: sans-serif; }
+    h2 { border-top: 1px solid #ccc; margin-top: 1em; padding-top: 1em; }
+    pre.js { border: 1px solid #def; background-color: aliceblue; border-radius: 0.5em; padding: 1em; }
+    /* example styling */
+    .suntabs { list-style-type: none; margin: 0; padding: 0; font-size: 0.9em; line-height: 26px; }
+    .suntabs li { display: inline-block; }
+    .suntabs a { border: 1px solid #ccc; border-width: 1px 1px 0 1px; margin-right: 2px; text-decoration: none; padding: 6px 16px; border-radius: 3px 3px 0 0; color: #555; background-color: #ccc; box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.2); }
+    .suntabs a:hover, .suntabs a:focus, .suntabs .active a { color: #222; background-color: white; box-shadow: none; }
+    .panels.suntabbed { border: 1px solid #ccc; margin: 0; padding: 0 1em; }
+    .panels.suntabbed h3 { display: none; }
+    </style>
+    <!--
+        Normally, the scripts would go at the end of the page, but I put
+        them in the head to inline the examples so their code remains in
+        context.
+    -->
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="jquery.suntabs.js"></script>
+</head>
+
+<body>
+<div id="container">
+<h1>&#x1f31e; jquery.suntabs</h1>
+<p><em>jQuery plugin for adding tab functionality to a list of tab panels. Some special features are built-in.</em></p>
+<ul>
+    <li>Progressive enhancement is used to automatically build the tabs for each set of panels.</li>
+    <li>Ids will automatically be generated if the panels don't have any.</li>
+    <li>Accessibility features such as aria roles and states are included.</li>
+    <li>Tabs and panels are styled with CSS.</li>
+    <li>Note that you may only have one set of classes (settings) per page or else you will lose functionality.</li>
+</ul>
+<p>Visit this <a href="https://github.com/sunnywalker/jquery.suntabs">project on GitHub</a> for downloads, updates, and issue tracking.</p>
+
+<h2>Example 1</h2>
+<div class="panels" id="example-1">
+    <div>
+        <h3 class="suntab-title">Panel 1</h3>
+        <p>Ipsum ratione, itaque, totam, neque architecto officiis vel velit eveniet deserunt consequuntur facilis consectetur harum facere nemo excepturi. Blanditiis sed veritatis aperiam.</p>
+    </div>
+    <div id="example1-tab2">
+        <h3 class="suntab-title">Panel 2</h3>
+        <p>Laborum, fugit. Voluptatem quas voluptas dolor minima, illum nulla accusamus omnis voluptatum a, placeat nihil rerum error molestiae libero harum sed sunt.</p>
+    </div>
+</div>
+<script data-example>$('#example-1').suntabs();</script>
+
+<h2>Example 2</h2>
+<p class="info">This is another set of tabbed panels independent from Example 1.</p>
+<div class="panels" id="example-2">
+    <div id="example2-tab1">
+        <h3 class="suntab-title">Panel A</h3>
+        <p>Iusto vero quo sapiente cupiditate reprehenderit autem debitis ratione aliquid illum ut cum nostrum, explicabo atque, accusantium ipsam dolorum labore expedita repudiandae!</p>
+    </div>
+    <div>
+        <h3 class="suntab-title">Panel B</h3>
+        <p>Ducimus voluptate voluptatibus aut ullam mollitia, debitis, corporis similique eveniet alias reiciendis odio dolores modi, dolorem, voluptatem molestias iste dolor dicta aspernatur!</p>
+    </div>
+</div>
+<script data-example>$('#example-2').suntabs();</script>
+
+<script>
+// display the source code for each example in the page.
+// this is for the demo page, not the plugin's functionality
+$('script[data-example]').each(function() {
+    var t = $(this),
+        pre = $('<pre class="js" />');
+    pre.text(t.text());
+    t.after(pre);
+});
+</script>
+</body>
+</html>
