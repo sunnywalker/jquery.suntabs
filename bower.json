@@ -1,0 +1,27 @@
+{
+    "name": "suntabs",
+    "description": "Add tab functionality to a list of tab panels.",
+    "keywords": [
+        "tab",
+        "panel",
+        "show",
+        "hide"
+    ],
+    "authors": [
+        {
+            "name": "Sunny Walker",
+            "homepage": "http://www.miraclesalad.com/"
+        }
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/sunnywalker/jquery.suntabs",
+    "year": "2015",
+    "version": "1.1.0",
+    "dependencies": {
+        "jquery": ">=1.7"
+    },
+    "main": "jquery.suntabs.js",
+    "ignore": [
+        "**/.*"
+    ]
+}
