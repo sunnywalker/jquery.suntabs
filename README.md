@@ -11,24 +11,26 @@ Note that while you can specify your own CSS classes for the various elements in
 # Usage
 
 ```html
-<div class="panels" id="panel-group-1">
-  <div>
-    <h2 class="suntab-title">First Section</h2>
+<div class="panels" id="panel-group-1"><!-- panel group -->
+  <div><!--first panel; id will be auto-generated -->
+    <h2 class="suntab-title">First Section</h2><!-- panel title will be used for tab text -->
     <p>Panel content.</p>
     <p>More panel content.</p>
-  <div>
-  <div id="panel2">
-    <h2 class="suntab-title">Section Section</h2>
+  <div><!-- end first panel -->
+  <div id="panel2"><!-- second panel with explicit id -->
+    <h2 class="suntab-title">Section Section</h2><!-- panel title will be used for tab text -->
     <p>Some more panel content.</p>
-  </div>
-</div>
-<script src="/path/to/jquery.js"></script>
-<script src="/path/to/jquery.suntabs.js"></script>
-<script>$('#panel-group-1').suntabs();</script>
+  </div><!-- end second panel -->
+</div><!-- end panel group -->
+<script src="/path/to/jquery.js"></script><!-- load jquery -->
+<script src="/path/to/jquery.suntabs.js"></script><!-- load suntabs -->
+<script>
+$('#panel-group-1').suntabs(); // activate suntabs on the panel group
+</script>
 ```
 # Demo
 
-[Demo page](index.html)
+See the included [demo page](index.html) for a usage example and sample styling.
 
 # Options
 

@@ -38,37 +38,37 @@
 <p>Visit this <a href="https://github.com/sunnywalker/jquery.suntabs">project on GitHub</a> for downloads, updates, and issue tracking.</p>
 
 <h2>Example 1</h2>
-<div class="panels" id="example-1">
-    <div>
-        <h3 class="suntab-title">Panel 1</h3>
+<div class="panels" id="example-1"><!-- panel group -->
+    <div><!-- first panel; id will be auto-generated -->
+        <h3 class="suntab-title">Panel 1</h3><!-- panel title used for the tab text -->
         <p>Ipsum ratione, itaque, totam, neque architecto officiis vel velit eveniet deserunt consequuntur facilis consectetur harum facere nemo excepturi. Blanditiis sed veritatis aperiam.</p>
-    </div>
-    <div id="example1-tab2">
-        <h3 class="suntab-title">Panel 2</h3>
+    </div><!-- end first panel -->
+    <div id="example1-tab2"><!-- second panel with explicit id -->
+        <h3 class="suntab-title">Panel 2</h3><!-- panel title used for the tab text -->
         <p>Laborum, fugit. Voluptatem quas voluptas dolor minima, illum nulla accusamus omnis voluptatum a, placeat nihil rerum error molestiae libero harum sed sunt.</p>
-    </div>
-</div>
+    </div><!-- end second panel -->
+</div><!-- end panel group -->
 <script data-example>$('#example-1').suntabs();</script>
 
 <h2>Example 2</h2>
 <p class="info">This is another set of tabbed panels independent from Example 1.</p>
-<div class="panels" id="example-2">
-    <div id="example2-tab1">
+<div class="panels" id="example-2"><!-- panel group 2 -->
+    <div id="example2-tab1"><!-- first panel with explicit id -->
         <h3 class="suntab-title">Panel A</h3>
         <p>Iusto vero quo sapiente cupiditate reprehenderit autem debitis ratione aliquid illum ut cum nostrum, explicabo atque, accusantium ipsam dolorum labore expedita repudiandae!</p>
-    </div>
-    <div>
-        <h3 class="suntab-title">Panel B</h3>
+    </div><!-- end first panel -->
+    <div><!-- second panel; id will be auto-generated -->
+        <h3 class="suntab-title">Panel B</h3><!-- panel title used for the tab text -->
         <p>Ducimus voluptate voluptatibus aut ullam mollitia, debitis, corporis similique eveniet alias reiciendis odio dolores modi, dolorem, voluptatem molestias iste dolor dicta aspernatur!</p>
-    </div>
-</div>
+    </div><!-- end second panel -->
+</div><!-- end panel group 2 -->
 <script data-example>$('#example-2').suntabs();</script>
 
 <script>
 // display the source code for each example in the page.
 // this is for the demo page, not the plugin's functionality
 $('script[data-example]').each(function() {
-    var t = $(this),
+    var t   = $(this),
         pre = $('<pre class="js" />');
     pre.text(t.text());
     t.after(pre);
