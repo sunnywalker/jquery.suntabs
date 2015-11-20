@@ -44,6 +44,7 @@
                 }
                 e.preventDefault();
                 tabs.find('li').removeClass('active').find('a').attr({'aria-selected': 'false', 'tabindex': '-1'});
+                t.closest('li').addClass('active');
                 t.attr({'aria-selected': 'true', 'tabindex': '0'});
                 panels.hide().attr('aria-hidden', 'true').filter(t.attr('href')).show().attr('aria-hidden', 'false');
             }).addClass('has-suntabs');
