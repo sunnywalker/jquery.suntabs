@@ -40,7 +40,8 @@
                         return;
                     }
                     tabs = t.closest('.'+settings.tabsContainerClass);
-                    panels = tabs.next().find('> div');
+                    // cache all the panels for this group
+                    panels = tabs.next().find('> *');
                 }
                 e.preventDefault();
                 tabs.find('li').removeClass('active').find('a').attr({'aria-selected': 'false', 'tabindex': '-1'});
