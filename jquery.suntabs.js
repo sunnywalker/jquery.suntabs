@@ -43,9 +43,8 @@
                     panels = tabs.next().find('> div');
                 }
                 e.preventDefault();
-                tabs.find('li').removeClass('active').find('a').attr('aria-selected', 'false').attr('tabindex', '-1');
-                t.closest('li').addClass('active').find;
-                t.attr('aria-selected', 'true').attr('tabindex', '0');
+                tabs.find('li').removeClass('active').find('a').attr({'aria-selected': 'false', 'tabindex': '-1'});
+                t.attr({'aria-selected': 'true', 'tabindex': '0'});
                 panels.hide().attr('aria-hidden', 'true').filter(t.attr('href')).show().attr('aria-hidden', 'false');
             }).addClass('has-suntabs');
         }
@@ -60,8 +59,7 @@
             }
             panels.each(function(i, v) {
                 var panel = $(v),
-                    heading = panel.find(settings.headerSelector).html(),
-                    tab = 0;
+                    heading = panel.find(settings.headerSelector).html();
                 if (!v.id) {
                     v.id = guid();
                 }
